@@ -1,0 +1,51 @@
+﻿@model List<MVC_Project_1.Models.ExCategory>
+@{
+    ViewBag.Title = "ListCategory";
+}
+
+<h2>ALL-Category</h2>
+
+@if (TempData["AlertMsg"] != null)
+{
+    <div class="alert alert-success">
+        <strong>Success !</strong>@TempData["AlertMsg"]
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+    </div>
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Category Name</th>
+        <th>Expanse Limit</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.ActionLink(item.Name, "CatNameSearch", "ExCategory", new { Id = item.Id }, null)</td>
+            <td>@item.Ex_Limit</td>
+            <td>
+                <a href="@Url.Action("EditCategory",new { item.Id,item.Name,item.Ex_Limit })" class="btn btn-success">Edit</a>
+                <a href="@Url.Action("Delete",new { item.Id })" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+@*<h2>Category Name</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Category Name</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.ActionLink(item.Name, "CatNameSearch", "ExCategory", new { Id = item.Id }, null)</td>
+        </tr>
+    }
+</table>*@
