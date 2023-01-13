@@ -3,6 +3,8 @@
 It has the Adding from the Category for the new and the features for the category to update delete
 With that we can add Expense with the category listed which should be selected and to update the expense with options like delete
 
+
+And Have the CRUD operataions with MVC
 ![Category_Added](https://user-images.githubusercontent.com/79348651/212407395-dc6d0d03-89ba-448d-94c5-4e2d2b2af4fd.png)
 ![Category_deleted](https://user-images.githubusercontent.com/79348651/212407405-d355c1dc-c09c-4007-a858-90b7e1fbfea8.png)
 ![Category_update](https://user-images.githubusercontent.com/79348651/212407412-30eacedc-586b-4964-bd41-adfc8c750aa7.png)
